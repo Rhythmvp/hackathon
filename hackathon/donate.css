@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  header {
+    background-color: rgb(239, 194, 122);
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkyellow;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    background-color:rgb(235, 185, 35);
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+   .donate-button {
+    background-color: rgb(235, 185, 35);
+    color: white;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .donate-button {
+    background-color: rgb(235, 185, 35);
+    color: white;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .disaster-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .disaster-box {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .disaster-box h2 {
+    margin-top: 0;
+  }
+  
+  .disaster-box button {
+    background-color: rgb(235, 185, 35);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .disaster-box button:hover {
+    background-color: rgb(200, 150, 0);
+  }
+  
+  .social-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:none;
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(6, 5, 5);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow at the bottom */
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .social-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+/* Donator of the Month */
+.donator-of-the-month {
+    
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .donator-of-the-month h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .donator-of-the-month p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Total Donation and Total Money Donated */
+  .totals {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .totals h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .totals p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
