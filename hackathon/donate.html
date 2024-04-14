@@ -9,9 +9,8 @@
 <body>
 <header>
   <nav>
-    <div class="logo"><a href="index.html"></a>Your Logo Here</div>
+    <a href="index.html"><img src="OIG3.jpeg" width="100vh" height="100vh"></a></div>
     <ul>
-      <li><a href="index.html">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Discover</a></li>
       <li><a href="#">Get Involved</a></li>
@@ -21,8 +20,7 @@
   </nav>
 </header>
 <main>
-  <h1>Donate for Disaster Relief</h1>
-  <p>Select a disaster relief effort to support:</p>
+    <h2 style="text-align: center; margin-top: 50px; font-size: 48px; color: #333; font-family: 'Times New Roman', serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">CONTRIBUTE FOR A GREATER CAUSE</h2>
   <div class="disaster-boxes">
     <div class="disaster-box">
       <h2>Earthquake Relief</h2>
@@ -39,32 +37,36 @@
       <p>Donate to help those affected by floods.</p>
       <button>Donate Now</button>
     </div>
-    <div class="disaster-boxes">
-        <div class="disaster-box">
-          <h2>Drought Relief</h2>
-          <p>Donate to help those affected by earthquakes.</p>
-          <button>Donate Now</button>
-        </div>
-        <div class="disaster-boxes">
-            <div class="disaster-box">
-              <h2>Gas leak Relief</h2>
-              <p>Donate to help those affected by earthquakes.</p>
-              <button>Donate Now</button>
-            </div>
-            <div class="disaster-boxes">
-                <div class="disaster-box">
-                  <h2>Miscellaneous Funds</h2>
-                  <p>Donate to help those affected by earthquakes.</p>
-                  <button>Donate Now</button>
-                </div>
-    <!-- Add more disaster boxes as needed -->
-    <div class="disaster-boxes"> 
+    <div class="disaster-box">
+      <h2>Drought Relief</h2>
+      <p>Donate to help those affected by droughts.</p>
+      <button>Donate Now</button>
+    </div>
+    <div class="disaster-box">
+      <h2>Gas Leak Relief</h2>
+      <p>Donate to help those affected by gas leaks.</p>
+      <button>Donate Now</button>
+    </div>
+    <div class="disaster-box">
+      <h2>Miscellaneous Funds</h2>
+      <p>Donate to help those affected by other disasters.</p>
+      <button>Donate Now</button>
+    </div>
+  </div>
   <div class="totals fade-in-up">
     <h2>Totals</h2>
-    <p>Total Money Collected: <span id="total-collected">$0</span></p>
-    <p>Total Money Donated: <span id="total-donated">$0</span></p>
-  </div></div>
-</div>
+    <div class="money-details">
+      <div class="money-item">
+        <p>Total Money Collected:</p>
+        <p class="money-amount" id="total-collected">$0</p>
+      </div>
+      <div class="money-item">
+        <p>Total Money Donated:</p>
+        <p class="money-amount" id="total-donated">$0</p>
+      </div>
+    </div>
+  </div>
+  
 </main>
 <footer>
   <ul class="social-links">
@@ -74,6 +76,6 @@
   </ul>
   <p>&copy; 2024 Your Organization. All Rights Reserved.</p>
 </footer>
-<script src="script.js"></script>
+<script src="donate.js"></script>
 </body>
 </html>
