@@ -18,12 +18,14 @@ body {
     background-color: darkyellow;
     padding: 10px 20px;
   }
-  
+/*   
   .logo {
+    width: 10vh;
+    height: 10vh;
     background-color:rgb(235, 185, 35);
     font-weight: bold;
     font-size: 1.2em;
-  }
+  } */
   
   nav ul {
     display: flex;
@@ -42,12 +44,19 @@ body {
     text-decoration: none;
     color: black;
   }
+  nav a:hover {
+    font-weight: bold;
+  }
    .donate-button {
+    border-radius: 10px;
     background-color: rgb(235, 185, 35);
     color: white;
     padding: 5px 10px;
     margin-left: 20px;
     cursor: pointer;
+  }
+  .donate-button:hover{
+    background-color: rgb(200, 150, 0);
   }
   
   .video-container {
