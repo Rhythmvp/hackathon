@@ -42,16 +42,67 @@ body {
     text-decoration: none;
     color: black;
   }
-   .donate-button {
-    border-radius: 10px;
-    margin: 4px;
+
+  .donate-button {
     background-color: rgb(235, 185, 35);
     color: white;
     padding: 5px 10px;
-    margin-left: 20px;
+    margin-left: 100px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
   }
- 
+  
+  /* The container <div> - needed to position the dropdown content */
+  .donate {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 0.3s ease-out;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .donate:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Fade-in animation for the dropdown */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
   main {
     padding: 20px;
   }
