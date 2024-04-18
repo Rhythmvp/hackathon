@@ -1,45 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate for Disaster Relief</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav>
-    <div class="logo"><a href="index.html"><img src="OIG3.jpeg" width="100vh" height="100vh"></a></div>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Discover</a></li>
-      <li><a href="#">Get Involved</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <div class="donate-button"><a href="donate.html">Donate</a></div>
-  </nav>
-  
-</header>
-<div class="video-container">
-  <video autoplay loop muted>
-    <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
-  </video>
-  </div>
-</div>
-<main>
-    <h1 style="display: flex;">WE HELP PEOPLE FROM DISTASTERS</h1>
-    <p>Help us in contributing for  a better world.</p>
-  <button class="sos-button" style="text-align: center;"  >EMERGENCY</button>
-  
-</main>
+    
+    <div class="weather-app">
+        <div class="container">
+            <h3 class="brand">the weather</h3>
+            <div>
+                <h1 class="temp">16&#176;</h1>
+                <div class="city-time">
+                    <h1 class="name">London</h1>
+                    <small>
+                        <span class="time">06:09</span>
+-
+                        <span class="date">monday sep 19</span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <img src="/icons/weather/weather/64x64/day/113.png" class="icon" alt="icon" width="50" height="50" />
+                    <span class="condition">cloudy</span>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <form id="locationinput">
+                <input type="text" class="search" placeholder="search location...">
+                <button type="submit" class="submit">
+                    <i class="fas fa-search"></i>           <!-- yes-->
+                </button>
+            </form>
 
-<footer>
-  <ul class="social-links">
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Instagram</a></li>
-  </ul>
-  <p>&copy; 2024 Your Organization. All Rights Reserved.</p>
-</footer>
+            <ul class="cities">
+                <li class="city">New york</li>
+                <li class="city">California</li> 
+                <li class="city">Paris</li>
+                <li class="city">Tokyo</li>
+            </ul>
+
+            <ul class="details"><h4>Weather Details</h4>
+            <li>
+                <span>Cloudy</span>
+                <span class="cloud">89%</span>
+            </li>
+            <li>
+                <span>humidity</span>
+                <span class="humidity">64%</span>
+            </li>
+            <li>
+                <span>wind</span>
+                <span class="wind">8km/h</span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        const app = document.querySelector('.weather-app');
+        const temp =document.querySelector('.temp')
+        const dateOutput = document.querySelector('.date');
+        const timeOutput = document.querySelector('.time');
+        const conditionOutput = document.querySelector('.condition');
+        const nameOutput = document.querySelector('.name');
+        const icon = document.querySelector('.icon');
+        const cloudOutput = document.querySelector('.cloud');
+        const humidityOutput = document.querySelector('.humidity');
+        const windOutput = document.querySelector('.wind');
+        const form = document.querySelector('.locationinput');
+        const search = document.querySelector('.search');
+        const btn = document.querySelector('.submit');
+        const cities = document.querySelector('.city');
+
+
+let cityInput = ' London';
+cities.forEach((city) => {
+    city.addEventListener("click",(e) => {
+        cityInput = e.target.innerHTML;
+        fetchWeatherData();
+        app.Style.opacity ='0';
+    });
+})
+form.addEventListener('submit' , (e) => {
+    if(search.Value.length==0){
+        alert('Please type in a city name');
+    }else{
+        cityInput=search.Value;
+        fetchWeatherData();
+        search.value = "";
+        app.style.opacity = "0";
+    }
+    e.preventDefault();
+});
+cities.ForEach();
+function dayofTheWeek(day , month , year ){
+    const weekday = [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "friday",
+        "saturday"
+    ];
+    return weekday[new Date('${day}/${month}/${year}').getDay()];
+};
+function fetchWeatherData(){
+    fetch('http://api.weatherapi.com/v1/current.json?key=3b51962f890942c4a5c52625241804=${cityInput}')
+    .then(Response => Response.json())
+    .then(data => {
+    console.log(data);
+
+    temp.innerHTML= data.current.temp_c + "&#176;";
+    conditionOutput.innerHTML= data.current.condition.text;
+
+    const date = data.location.localtime;
+    const y = parseInt(date.substr(0,4));
+    const m = parseInt(date.substr(5,2));
+    const d = parseInt(date.substr(8,2));
+    const time = date.substr(11);
+
+    dateOutput.innerHTML= '${dayofTheWeek(d , m , y )}${d} , ${m} , ${y}';
+    timeOutput.innerHTML= time;
+    nameOutput.innerHTML=data.location.name;
+
+    const iconId = data.current.condition.icon.substr("//cdn.weatherapi.com/weather/64x64/".length);
+
+        icon.src = "./icons/" + iconId ;
+
+        cloudOutput.innerHTML=data.current.cloud +"%";
+        humidityOutput.innerHTML=data.current.humidity +"%";
+        windOutput.innerHTML=data.current.wind_kph + "km/h";
+
+
+        let timeofDay = "day";
+        const code = data.current.condition.code ;
+
+if(!data.current.is_day){
+    timeofDay='night';
+}
+if(code == 1000){
+    app.style.backgroundImage ='url(./images/${timeofDay}/clear.jpg)';
+    btn.style.background = "#e5ba92";
+    if(timeofDay == "night"){
+        btn.style.background="#181e27";
+    }
+}
+else if (
+    code == 1003 ||
+    code == 1006 ||
+    code == 1009 ||
+    code == 1030 ||
+    code == 1069 ||
+    code == 1087 ||
+    code == 1135 ||
+    code == 1273 ||
+    code == 1276 ||
+    code == 1279 ||
+    code == 1282
+){
+    app.style.backgroundImage = ' url(./images/${timeofDay}/cloudy.jpg)';
+    btn.style.background = "#fa6d1b" ;
+    if(timeofDay == "night"){
+        btn.style.background ='#181e27' ;
+
+    }
+
+}else if(
+    code == 1063 ||
+    code == 1069 ||
+    code == 1072 ||
+    code == 1150 ||
+    code == 1153 ||
+    code == 1180 ||
+    code == 1183 ||
+    code == 1186 ||
+    code == 1189 ||
+    code == 1192 ||
+    code == 1195 ||
+    code == 1204 ||
+    code == 1207 ||
+    code == 1240 ||
+    code == 1243 ||
+    code == 1246||
+    code == 1249||
+    code == 1252
+){
+    app.style.backgroundImage = 'url(./images/${timeofDay}/rainy.jpg)';
+    btn.style.background = '#647d75' ;
+    if(timeofDay == 'night'){
+        btn.style.background = "#325c80" ;
+    }
+}else{
+    app.style.backgroundImage= 'url(./images/${timeofDay}/snowy.jpg)';
+    btn.style.background="#4d72aa";
+    if(timeofDay=='night'){
+        btn.style.background = "#1b1b1b";
+    }
+}
+app.style.opacity='1'; 
+})
+.catch(() => {
+    alert('city not found ,please try again');
+    app.style.opacity = '1';
+
+});
+fetchWeatherData();
+app.style.opacity="1";
+}
+    </script>
 </body>
 </html>
