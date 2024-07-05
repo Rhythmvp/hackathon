@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="discover.css" rel="stylesheet">
+    <title>Disaster Prevention and Management</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo"><a href="index.html"><img src="OIG3.jpeg" width="100vh" height="100vh"></a></div>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="Register.html">Get Involved</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="donate">
+            <button class="donate-button">Donate</button>
+            <div class="dropdown-content">
+              <a href="blood.html">Donate Blood</a>
+              <a href="donate.html">Donate Funds</a>
+            </div>
+          </div>    
+        </nav>
+    </header>
+    <div class="container">
+            <div class="slider images">
+                <h2>Image Slider</h2>
+                <div class="slider-wrapper">
+                    <img src="Images/360_F_326321921_HK0y8OlTctsa6obtoPSudWpWwIbRXFoe.jpg" alt="Image 1">
+                    <img src="Images/images.jpeg" alt="Image 2">
+                    <img src="Images/download.jpeg" alt="Image 3">
+                </div>
+            </div></div>
+        <div class="news updates">
+            <h2>News Updates</h2>
+            <div class="flex-container">
+                <div class="news update-box">
+                    <h3>News Update 1</h3>
+                    <p>Details for news update 1.</p>
+                </div>
+                <div class="news update-box">
+                    <h3>News Update 2</h3>
+                    <p>Details for news update 2.</p>
+                </div>
+                <div class="news update-box">
+                    <h3>News Update 3</h3>
+                    <p>Details for news update 3.</p>
+                </div>
+                <div class="news update-box">
+                    <h3>News Update 3</h3>
+                    <p>Details for news update 3.</p>
+                </div>
+            </div>
+        </div>
+        <div class="areas of action">
+            <h2>Areas of Action</h2>
+            <div class="flex-container">
+                <div class="areas action-box">
+                    <h3>Action Area 1</h3>
+                    <p>Details for action area 1.</p>
+                </div>
+                <div class="areas action-box">
+                    <h3>Action Area 2</h3>
+                    <p>Details for action area 2.</p>
+                </div>
+                <div class="areas action-box">
+                    <h3>Action Area 3</h3>
+                    <p>Details for action area 3.</p>
+                </div>
+                <div class="areas action-box">
+                    <h3>Action Area 2</h3>
+                    <p>Details for action area 2.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="social-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+        <p>&copy; 2024 Your Organization. All Rights Reserved.</p>
+      </footer>
+      <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slider-wrapper img');
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            document.querySelector('.slider-wrapper').style.transform = `translateX(-${index * 40}%)`;
+        }, 3000);
+    </script>
+      </body>
+      </html>
+      
+
+
+
