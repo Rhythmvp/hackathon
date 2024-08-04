@@ -1,0 +1,42 @@
+body{
+    background: rgb(41, 41, 41);
+    font-family: "Lato",sans-serif;
+    display: grid;
+    place-items: center;
+}
+#heading{
+    padding: 30px;
+    color: rgb(0, 251, 142);
+    font-size: 50px;
+}
+.container{
+    padding: 2%;
+    background: rgba(108, 108, 108, 0.699);
+    border-radius: 20px;
+    height: auto;
+    width: 70%;
+}
+h1{
+    color: rgb(196, 196, 196);
+    font-size: 40px;
+    font-family: monospace;
+}
+p{
+    color: rgb(193, 193, 193);
+    font-size: 20px;
+    line-height: 30px;
+}
+.slogan{
+    display: grid;
+    place-items: center;
+}
+.text{
+    border: 1px solid rgb(255, 152, 152);
+    padding: 3%;
+    border-radius: 20px;
+}
+.text span{
+    font-size: 25px;
+    color: rgb(255, 152, 152);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

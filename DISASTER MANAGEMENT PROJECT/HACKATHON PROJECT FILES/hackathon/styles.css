@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  header {
+    background-color: rgb(238, 230, 217);
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkyellow;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+  }
+  nav a:hover {
+    font-weight: bold;
+  }
+
+.donate-button {
+  background-color: rgb(235, 185, 35);
+  color: white;
+  padding: 5px 10px;
+  margin-left: 100px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.donate {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.3s ease-out;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.donate:hover .dropdown-content {
+  display: block;
+}
+
+/* Fade-in animation for the dropdown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+  .video-container {
+    position: relative;
+  }
+  
+  .video-container video {
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 200vh;
+    height: 300vh;
+    z-index: -1; /* Move the video behind other elements */
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), 
+                 linear-gradient(to right, transparent 20%, black 20%, black 40%, transparent 40%, transparent 60%, black 60%, black 80%, transparent 80%);
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkyellow;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow at the bottom */
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .social-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .social-links a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+/* Existing CSS styles */
+.sos-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sos-button:hover {
+  background-color: darkred;
+}
+  
+/* Existing CSS styles */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Ensure text is above the video */
+  padding: 20px;
+}
+.text-overlay h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.text-overlay p {
+  font-size: 1.5em;
+}

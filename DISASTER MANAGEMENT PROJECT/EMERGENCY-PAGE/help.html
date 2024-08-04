@@ -1,0 +1,249 @@
+<!DOCTYPE html>                            
+<html lang="en">                         
+<head>
+    <meta charset="UTF-8">                 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMERGENCY-HELPDESK</title>
+    <link rel = "stylesheet" href = "help.css">
+    <script src = "https://kit.fontawesome.com/a7a8925472.js" crossorigin="anonymous"></script>
+    <link href = "https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <script src="firebase.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SOSNetwork <i class="fa-brands fa-hive"></i></h1>
+    </div>
+    <div class="container-1">
+        <div class="wrapper">
+            <p>Facing An</p>
+            <p class = "text">Issue,</p>
+            <p>Let Us Know...</p>
+            <button type = "submit" class = "button" id = "scrollButton"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("scrollButton").onclick = function() {
+            document.getElementById("section").scrollIntoView({ behavior: 'smooth' });
+        };
+    </script>
+    <div class="container-2" id = "section">
+        <div class="wrapper-box" id = "data-form">
+            <div>
+                <input type = "text" placeholder = "ENTER NAME" id = "box"><br>
+            </div>
+            <div>
+                <select type = "text" class = "disaster" id = "box">
+                    <option value = "None">DISASTER TYPE</option>
+                    <option value = "Earthquake">EARTHQUAKE</option>
+                    <option value = "Flood">FLOOD</option>
+                    <option value = "Cyclone">CYCLONE</option>
+                    <option value = "Drought">DROUGHT</option>
+                    <option value = "Landslide">LANDSLIDE</option>
+                    <option value = "Avalanche">AVALANCHE</option>
+                    <option value = "Tornado">TORNADO</option>
+                    <option value = "Forest-Fire">FOREST-FIRE</option>
+                    <option value = "Domestic-Fire">DOMESTIC-FIRE</option>
+                    <option value = "Gas-Leakage">GAS-LEAKAGE</option>
+                </select><br>
+            </div>
+            <div>
+                <input type = "text" placeholder = "ENTER CITY" id = "box">
+            </div>
+            <div>
+                <select type = "text" class = "state" id = "box">
+                    <option>ENTER STATE</option>
+                    <option>ANDHRA PRADESH</option>
+                    <option>ARUNACHAL PRADESH</option>
+                    <option>ASSAM</option>
+                    <option>BIHAR</option>
+                    <option>CHHATTISGARH</option>
+                    <option>GOA</option>
+                    <option>GUJRAT</option>
+                    <option>HARYANA</option>
+                    <option>HIMANCHAL PRADESH</option>
+                    <option>JHARKHAND</option>
+                    <option>KARNATAKA</option>
+                    <option>KERALA</option>
+                    <option>MADHYA PRADESH</option>
+                    <option>MAHARASHTRA</option>
+                    <option>MANIPUR</option>
+                    <option>MEGHALAYA</option>
+                    <option>MIZORAM</option>
+                    <option>NAGALAND</option>
+                    <option>ODISHA</option>
+                    <option>PUNJAB</option>
+                    <option>RAJASTHAN</option>
+                    <option>SIKKIM</option>
+                    <option>TAMIL NADU</option>
+                    <option>TELANGANA</option>
+                    <option>TRIPURA</option>
+                    <option>UTTAR PRADESH</option>
+                    <option>UTTARAKHAND</option>
+                    <option>WEST BENGAL</option>
+                </select>
+            </div>
+            <div>
+                <button type = "submit" class = "button-2" id="openPopupBtn">REPORT</button>
+            </div>
+        </div>
+        <div class="wrapper-2">
+            <p>Report Now</p>
+            <p>Save Lives,</p>
+            <p>Your Alert Can Make A</p>
+            <p>Difference,</p>
+            <p id = icon><i class="fa-solid fa-arrow-left"></i></p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="cards">
+            <span>Need More Help,</span>
+            <span>Here Are Some</span>
+            <span>Quality Resources</span>
+            <span>You Can Trust</span><br>
+            <span><i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="sub-card">
+            <button type = "submit" id = "btn1">Hospitals</button>
+            <button type = "submit" id = "btn2">Police Stations</button>
+            <button type = "submit" id = "btn3">Fire Stations</button>
+            <button type = "submit" id = "btn4">Nearby Shelters</button>
+        </div>
+        <script>
+            document.getElementById("btn1").onclick = function() {
+            window.location.href = "https://maps.app.goo.gl/3Wg28VtqitFAGJXp9";
+        };
+            document.getElementById("btn2").onclick = function() {
+            window.location.href = "https://maps.app.goo.gl/V2pNGEAoDhSWyhLAA";
+        };
+            document.getElementById("btn3").onclick = function() {
+            window.location.href = "https://maps.app.goo.gl/gjTbJop9wLgDBZW98";
+        };
+            document.getElementById("btn4").onclick = function() {
+            window.location.href = "https://maps.app.goo.gl/ejLisseP4yfh1XR26";
+        };
+        </script>
+    </div>
+    <div class="primary">
+        <div class = "card-box">
+            <span>In Need Of Blood...?</span>
+            <span>Find Any Type Near You</span>
+            <span>With Just One Click</span><br><br><br><br>
+            <button type = "submit" id = "btn5">Blood Bank</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn5").onclick = function() {
+        window.location.href = "http://friends2support.org/";
+    };
+    </script>
+    <div class="help">
+        <span>Help Us To Reach Out</span>
+        <span>More People,</span><br>
+        <span id = "slogan">Your Compassion Can Change Lives</span>
+    </div>
+    <div class="pictures">
+        <img src = "main5.webp">
+        <img src = "main2.jpeg">
+        <img src = "main3.jpeg">
+        <img src = "main4.jpeg">
+    </div>
+    <div class="parent" id = "donate-money">
+        <div class="donate">
+            <span>Every Dollar Counts,</span>
+            <span>Support the Cause</span><br></br>
+            <span id = "dollar">1$</span><br>
+            <button type = "submit" id = "donate_money">Donate</button><br><br>
+            <span>Stand With Us in Emergency Relief</span>
+        </div>
+    </div>
+    <script>
+        document.getElementById("donate-money").onclick = function() {
+        window.location.href = "payment.html";
+    };
+    </script>
+    <div class="footer">
+        <div class="social">
+            <center><h2>Follow Us</h2></center>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-discord"></i>
+        </div>
+    </div>
+    <div class="info">
+        <span><a href="info.html">Know More</a></span>
+    </div>
+    <div class="footer-end">
+        <span>Privacy Policy</span>
+        <span>All Rightss Reserved <i class="fa-regular fa-copyright"> 2024</i></span>
+        <span>Terms And Conditions</span>
+    </div>
+    <div id="popupOverlay" class="overlay">
+        <div class="popup">
+            <span id="closePopupBtn" class="close">&times;</span>
+            <img src="C:\Users\Priyanshu\Desktop\DISASTER MANAGEMENT PROJECT\green tick.jpeg" id = "popup-img"><br><br>
+            <div id="locationInfo"></div>
+            <h2>Thank You For Reporting</h2><br>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const openPopupBtn = document.getElementById('openPopupBtn');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+        openPopupBtn.addEventListener('click', () => {
+            popupOverlay.style.display = 'flex';
+        });
+        closePopupBtn.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+        window.addEventListener('click', (event) => {
+            if (event.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
+    });
+    </script>
+    <script>
+        document.getElementById('openPopupBtn').addEventListener('click', () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById('locationInfo').innerText = "Geolocation is not supported by this browser.";
+            }
+        });
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            fetch(`https://geocode.xyz/${latitude},${longitude}?geoit=json`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('locationInfo').innerHTML = `
+                        Coordinates: (${latitude}, ${longitude})<br>
+                    `;
+                })
+                .catch(error => {
+                    document.getElementById('locationInfo').innerText = "Unable to retrieve location data.";
+                });
+        }
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('locationInfo').innerText = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('locationInfo').innerText = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('locationInfo').innerText = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById('locationInfo').innerText = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
